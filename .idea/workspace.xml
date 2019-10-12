@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="661a56bc-b7d0-4534-bb88-34b00003f0b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTMl/LandingPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMl/LandingPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/DataBaseConnector.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/DataBaseConnector.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -143,7 +137,7 @@
       <workItem from="1570683837380" duration="611000" />
       <workItem from="1570697452755" duration="1938000" />
       <workItem from="1570699500250" duration="4737000" />
-      <workItem from="1570878442505" duration="4172000" />
+      <workItem from="1570878442505" duration="4578000" />
     </task>
     <servers />
   </component>

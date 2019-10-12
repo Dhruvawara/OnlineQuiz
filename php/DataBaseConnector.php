@@ -29,7 +29,7 @@
     }
     echo "</p>";
 
-    echo "<table>" . "<tr align='center'>\n";
+    echo "<table align='center'>" . "<tr align='center'>\n";
 
     $num_rows = mysqli_num_rows($result);
 
@@ -45,7 +45,7 @@
         echo "</tr>\n";
 
         for ($i = 0; $i < $num_rows; $i++) {
-            echo "<tr>";
+            echo "<tr align='center'>";
             $values = array_values($row);
             for ($j = 0; $j < $num_fields; $j++) {
                 $value = htmlspecialchars(($values[$j]));
