@@ -12,7 +12,7 @@
     </style>
 </head>
 <body>
-<div class="uk-overlay uk-overlay-secondary uk-card-secondary uk-position-center">
+<div>
     <?php
     $db = mysqli_connect("localhost:3306", "root", "", "COMPANY");
     if (mysqli_connect_errno()) {
@@ -25,7 +25,7 @@
 
     echo "<p align='center' style='align-content: center'>";
     for ($i = 0; $i < 5000; $i++) {
-        echo $i;
+        echo $i." ";
     }
     echo "</p>";
 
