@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="661a56bc-b7d0-4534-bb88-34b00003f0b7" name="Default Changelist" comment="" />
+    <list default="true" id="661a56bc-b7d0-4534-bb88-34b00003f0b7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTMl/LandingPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMl/LandingPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/DataBaseConnector.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/DataBaseConnector.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,12 +35,32 @@
     <expand />
     <select />
   </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../OnlineQuiz\exportToHTML" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="Test" id="0c083100-0275-47c3-b357-fbec6aa57ba2" name="Test" use_path_mappings="true" />
+    </servers>
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3" />
   <component name="ProjectId" id="1Rp05lGRVfVOGKRqLvzYmIlzOLs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/HTMl" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\OnlineQuiz\HTMl" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\OnlineQuiz\HTMl" />
       <recent name="C:\xampp\htdocs\OnlineQuiz\php" />
@@ -51,25 +79,53 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.LandingPage.html">
+  <component name="RunManager" selected="PHP Script.DataBaseConnector.php">
     <configuration name="LandingPage.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/OnlineQuiz/HTMl/LandingPage.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="StartingPage.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/OnlineQuiz/HTMl/StartingPage.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="DataBaseConnector.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/php/DataBaseConnector.php">
-      <method v="2">
-        <option name="LaunchBrowser.Before.Run" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-      </method>
+    <configuration name="OnlineQuiz" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner directory="$PROJECT_DIR$" />
+      <method v="2" />
     </configuration>
+    <configuration name="DataBaseConnector.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/php/DataBaseConnector.php">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.LandingPage.html" />
+      <item itemvalue="JavaScript Debug.StartingPage.html" />
+      <item itemvalue="PHP Script.DataBaseConnector.php" />
+      <item itemvalue="PHPUnit.OnlineQuiz" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.LandingPage.html" />
-        <item itemvalue="JavaScript Debug.StartingPage.html" />
         <item itemvalue="PHP Script.DataBaseConnector.php" />
+        <item itemvalue="JavaScript Debug.StartingPage.html" />
+        <item itemvalue="JavaScript Debug.LandingPage.html" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d46fe32d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d46fe32d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@79388b10" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -81,11 +137,30 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570348548114</updated>
-      <workItem from="1570348549254" duration="5617000" />
+      <workItem from="1570348549254" duration="6312000" />
+      <workItem from="1570682985737" duration="511000" />
+      <workItem from="1570683579910" duration="228000" />
+      <workItem from="1570683837380" duration="611000" />
+      <workItem from="1570697452755" duration="1938000" />
+      <workItem from="1570699500250" duration="4737000" />
+      <workItem from="1570878442505" duration="4172000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
