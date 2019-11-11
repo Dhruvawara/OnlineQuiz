@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="661a56bc-b7d0-4534-bb88-34b00003f0b7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/QUIZ_TEMPLETE.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/QUIZ_TEMPLETE.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTMl/LandingPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMl/LandingPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTMl/StartingPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMl/StartingPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/DataBaseConnector.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/DataBaseConnector.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/QUIZ_TEMPLETE.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/QUIZ_TEMPLATE.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +67,11 @@
       <recent name="C:\xampp\htdocs\OnlineQuiz" />
     </key>
   </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="DataBaseConnector.php (PHP Script)" />
+    </option>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -75,7 +84,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.DataBaseConnector.php">
+  <component name="RunManager" selected="JavaScript Debug.LandingPage.html">
     <configuration name="LandingPage.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/OnlineQuiz/HTMl/LandingPage.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -89,21 +98,21 @@
     <configuration name="DataBaseConnector.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/php/DataBaseConnector.php">
       <method v="2" />
     </configuration>
-    <configuration name="QUIZ_TEMPLETE.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/php/QUIZ_TEMPLETE.php">
+    <configuration name="QUIZ_TEMPLATE.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/php/QUIZ_TEMPLATE.php">
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.LandingPage.html" />
       <item itemvalue="JavaScript Debug.StartingPage.html" />
       <item itemvalue="PHP Script.DataBaseConnector.php" />
+      <item itemvalue="PHP Script.QUIZ_TEMPLATE.php" />
       <item itemvalue="PHPUnit.OnlineQuiz" />
-      <item itemvalue="PHP Script.QUIZ_TEMPLETE.php" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="PHP Script.DataBaseConnector.php" />
-        <item itemvalue="PHP Script.QUIZ_TEMPLETE.php" />
         <item itemvalue="JavaScript Debug.StartingPage.html" />
+        <item itemvalue="PHP Script.QUIZ_TEMPLATE.php" />
         <item itemvalue="JavaScript Debug.LandingPage.html" />
       </list>
     </recent_temporary>
@@ -112,26 +121,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d46fe32d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d46fe32d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@79388b10" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4b74462e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4b74462e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@363f70a" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -153,7 +143,10 @@
       <workItem from="1570683837380" duration="611000" />
       <workItem from="1570697452755" duration="1938000" />
       <workItem from="1570699500250" duration="4737000" />
-      <workItem from="1570878442505" duration="8952000" />
+      <workItem from="1570878442505" duration="10890000" />
+      <workItem from="1571409982769" duration="22000" />
+      <workItem from="1573026522254" duration="655000" />
+      <workItem from="1573369232250" duration="4068000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1570883719202</created>
@@ -169,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570885330402</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Test">
+      <created>1570889636261</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1570889636261</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
