@@ -1,9 +1,7 @@
 <?php
 
-if($con = mysqli_connect('localhost:3306','root',''))
-{
-    if(!mysqli_select_db($con,'dbms'))
-    {
+if ($con = mysqli_connect('localhost:3306', 'root', '')) {
+    if (!mysqli_select_db($con, 'dbms')) {
         ?>
 
         <div uk-alert>
@@ -18,9 +16,7 @@ if($con = mysqli_connect('localhost:3306','root',''))
 
         <?php
     }
-}
-else
-{
+} else {
     ?>
     <div uk-alert>
         <a class="uk-alert-close" uk-close></a>
@@ -80,7 +76,32 @@ else
     </div>
 </nav>
 
-
+<div class="uk-section uk-background-secondary uk-light">
+    <div class="uk-container uk-container-expand uk-text-center " style=" padding: 0%; border: red;">
+        <br>
+        <h3 style="margin-top:-4%"> All the best for the Quiz </h3>
+        <h5 style="margin-top:1%; border: 1px solid red; padding:2.5%;"> There will be 10 questions, Each question
+            carries 1 marks. The answers given by the user will evaluated to 10 marks </h5>
+    </div>
+    <br>
+    <div class="uk-container uk-container-expand" style="background-color: rgb(62, 65, 68)">
+        <form action="check.php" method="post">
+            <?php
+            $i = "A001";
+                $sql1 = "SELECT * FROM QUESTIONS WHERE Q_ID = $i ";
+                $result1 = mysqli_query($con, $sql1);
+                $rows1 = mysqli_fetch_array($result1);
+                    ?>
+                    <br>
+                    <div class="uk-card uk-card-secondary uk-card-body uk-align-center uk-width-xxlarge uk-margin-remove-bottom uk-margin-remove-top">
+                        <h3 class="uk-card-title uk-align-left@s uk-align-left@m uk-align-left@l uk-align-left@x1 uk-margin-remove-adjacent uk-padding-remove" id="question">
+                            <?php echo $i . " : " . $rows1['QUESTION']; ?></h3>
+                        <br><br>
+                    </div>
+            <input type="SUBMIT" class="uk-button uk-button-primary uk-button-large uk-align-center">
+        </form>
+    </div>
+</div>
 
 </body>
 </html>
