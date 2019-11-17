@@ -31,7 +31,7 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <title>Online Quiz</title>
     <meta charset="utf-8">
@@ -62,28 +62,14 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
 
     </style>
 </head>
-<body bgcolor="#808080">
+<body>
 <nav class="uk-navbar-container uk-dark uk-background-secondary uk-position-top uk-text-center uk-margin uk-navbar">
     <div class="uk-navbar-left">
-        <a class="uk-navbar-item uk-logo" href="../HTMl/StartingPage.html">
-            <img src="../img/logo.png" width="50" height="40" alt="Not Found Logo">
+        <a class="uk-navbar-item uk-logo" href="../HTML/StartingPage.html">
+            <h3 class="uk-text-muted">Online<br>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;Quiz</h3>
         </a>
-        <ul class="uk-navbar-nav">
-            <li>
-                <a href="#">
-                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: receiver"></span>
-                    Support
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: user"></span>
-                    About Us
-                </a>
-            </li>
-        </ul>
-
     </div>
+
 </nav>
 
 <div class="uk-section uk-background-secondary uk-light">
@@ -98,11 +84,11 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
         <form action="check.php" method="post">
             <?php
 
-            $result = mysqli_query($con, "select idQuiz from quiz");
+            $result = mysqli_query($con, "SELECT * FROM quiz");
             $idquizs = array();
             $i = 0;
             while ($row = mysqli_fetch_assoc($result)) {
-                $idquizs[$i] = $row['idQuiz'];
+                $idquizs[$i] = $row['idQUIZ'];
                 $i++;
             }
 
@@ -115,37 +101,19 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
                 <h4 class="uk-card-title uk-align-left@s uk-align-left@m uk-align-left@l uk-align-left@x1 uk-margin-remove-adjacent uk-padding-remove">
 
                     <?php
+                    $i = 1;
                     while ($row = mysqli_fetch_assoc($result)) {
-                        echo substr($row['Q_ID'], -2) . ". " . $row['QUESTION'] . "<br><br>";
+                        echo substr($row['Q_ID'], -2) . ". " . $row['QUESTION'];
+                        echo "<fieldset name='" . substr($row['Q_ID'], -4) . "'>";
+                        echo "<input type=\"radio\" value=\"A\"  name='" . substr($row['Q_ID'], -4) . "' checked>" . $row['optionA'];
+                        echo "<input type=\"radio\" value=\"B\" name='" . substr($row['Q_ID'], -4) . "'>" . $row['optionB'];
+                        echo "<input type=\"radio\" value=\"C\" name='" . substr($row['Q_ID'], -4) . "'>" . $row['optionC'] . "</fieldset><br><br>";
+                        $i++;
                     }
                     ?>
                 </h4>
                 <br><br>
-                <h3>
-                    <table width="100%" style="border-color: #e6f5ff; border-width: thick">
-                        <tr>
-                            <th>Question Number</th>
-                            <th>Answer Selection</th>
-                        </tr>
 
-                        <?php
-
-                        $result = mysqli_query($con, "SELECT * FROM QUESTIONS where Q_ID LIKE '$quizid%'");
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            echo "<tr style='text-align: center'><td>" . substr($row['Q_ID'], -2) . "</td>";
-                            echo "<td><div class='col-75'></div><select style='width: 50%;text-align: center' name='" . substr($row['Q_ID'], -4) . "' size=\"1\">";
-                            echo "<option value='A'>A</option>";
-                            echo "<option value='B'>B</option>";
-                            echo "<option value='C'>C</option>";
-                            echo "</select></div></td></tr>";
-                        }
-                        $result = mysqli_query($con, "SELECT * FROM QUESTIONS where Q_ID LIKE '$quizid%'");
-                        $row = mysqli_fetch_assoc($result);
-                        $temp = substr($row['Q_ID'], -4);
-                        ?>
-                    </table>
-
-                </h3>
                 <br><br>
                 <?php
                 echo " <input value=\"$quizid\" id=\"type\" type=\"hidden\" name='type'>";
@@ -155,7 +123,7 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
 
                 <label for="username" style="width: 25%;height: 25px">USER NAME:</label>
                 <input style="height: 25px;border-radius: 5px;color: #080808;width: 75%" type="text" id="username"
-                       name="USERNAME">
+                       name="USERNAME" value="Unknown">
 
             </div>
 

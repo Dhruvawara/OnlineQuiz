@@ -31,7 +31,7 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <title>Online Quiz</title>
     <meta charset="utf-8">
@@ -49,30 +49,27 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
             margin-left: 50.4%;
             margin-top: -1.5%;
         }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
     </style>
 </head>
-<body bgcolor="#808080">
+<body>
 <nav class="uk-navbar-container uk-dark uk-background-secondary uk-position-top uk-text-center uk-margin uk-navbar">
     <div class="uk-navbar-left">
-        <a class="uk-navbar-item uk-logo" href="../HTMl/StartingPage.html">
-            <img src="../img/logo.png" width="50" height="40" alt="Not Found Logo">
+        <a class="uk-navbar-item uk-logo" href="../HTML/StartingPage.html">
+            <h3 class="uk-text-muted">Online<br>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;Quiz</h3>
         </a>
-        <ul class="uk-navbar-nav">
-            <li>
-                <a href="#">
-                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: receiver"></span>
-                    Support
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: user"></span>
-                    About Us
-                </a>
-            </li>
-        </ul>
-
     </div>
+
 </nav>
 
 <div class="uk-section uk-background-secondary uk-light">
