@@ -64,7 +64,7 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
 </head>
 <body>
 <nav class="uk-navbar-container uk-dark uk-background-secondary uk-position-top uk-text-center uk-margin uk-navbar">
-    <div class="uk-navbar-left">
+    <div class="uk-navbar-center">
         <a class="uk-navbar-item uk-logo" href="../HTML/StartingPage.html">
             <h3 class="uk-text-muted">Online<br>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;Quiz</h3>
         </a>

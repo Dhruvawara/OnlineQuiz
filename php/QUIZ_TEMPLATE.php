@@ -64,7 +64,7 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
 </head>
 <body>
 <nav class="uk-navbar-container uk-dark uk-background-secondary uk-position-top uk-text-center uk-margin uk-navbar">
-    <div class="uk-navbar-left">
+    <div class="uk-navbar-center">
         <a class="uk-navbar-item uk-logo" href="../HTML/StartingPage.html">
             <h3 class="uk-text-muted">Online<br>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;Quiz</h3>
         </a>
@@ -84,7 +84,7 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
         <form action="check.php" method="post">
             <?php
 
-            $result = mysqli_query($con, "SELECT * FROM quiz");
+            $result = mysqli_query($con, "call quiz_types();");
             $idquizs = array();
             $i = 0;
             while ($row = mysqli_fetch_assoc($result)) {
@@ -93,8 +93,10 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
             }
 
             $quizi = array_rand($idquizs, 1);
-            $quizid = $idquizs[$quizi];
-            $result = mysqli_query($con, "SELECT * FROM QUESTIONS where Q_ID like '$quizid%'");
+            $quizid = trim((string)$idquizs[$quizi]);
+
+            $con = mysqli_connect('localhost:3306', 'root', '','dbms');
+            $result = mysqli_query($con, "SELECT * FROM QUESTIONS where Q_ID like '$quizid%'") or die("ZZZZ");
             ?>
             <br>
             <div class="uk-card uk-card-secondary uk-card-body uk-align-center uk-width-xxlarge uk-margin-remove-bottom uk-margin-remove-top">

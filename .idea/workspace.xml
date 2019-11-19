@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="661a56bc-b7d0-4534-bb88-34b00003f0b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTMl/LandingPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/LandingPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTMl/StartingPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/StartingPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/QUIZ_TEMPLATE.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/QUIZ_TEMPLATE.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/check.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/check.php" afterDir="false" />
     </list>
@@ -34,17 +32,6 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="dbms@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="dbms@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="dbms@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="dbms: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -146,7 +133,17 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c6ba58f6" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c6ba58f6" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@302a04b6" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -176,7 +173,9 @@
       <workItem from="1573453093671" duration="1561000" />
       <workItem from="1573524943103" duration="32005000" />
       <workItem from="1573624533685" duration="2001000" />
-      <workItem from="1573986773444" duration="5047000" />
+      <workItem from="1573986773444" duration="5191000" />
+      <workItem from="1574070145116" duration="1440000" />
+      <workItem from="1574072820783" duration="1577000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1570883719202</created>
@@ -220,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573581790698</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ass">
+      <created>1573992671741</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1573992671741</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +248,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test" />
     <MESSAGE value="aas" />
-    <option name="LAST_COMMIT_MESSAGE" value="aas" />
+    <MESSAGE value="ass" />
+    <option name="LAST_COMMIT_MESSAGE" value="ass" />
   </component>
 </project>
