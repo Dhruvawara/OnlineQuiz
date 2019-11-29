@@ -85,25 +85,76 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
 
             $quizid = $_POST["type"];
             $Temp = $quizid . "001";
-            $Answered[0] = $_POST[$Temp];
+            if(isset($_POST[$Temp])){
+                $Answered[0] = $_POST[$Temp];
+            }
+            else{
+                $Answered[0]="O";
+            }
             $Temp = $quizid . "002";
-            $Answered[1] = $_POST[$Temp];
+            if(isset($_POST[$Temp])){
+                $Answered[1] = $_POST[$Temp];
+            }
+            else{
+                $Answered[1]="O";
+            }
             $Temp = $quizid . "003";
-            $Answered[2] = $_POST[$Temp];
+            if(isset($_POST[$Temp])){
+                $Answered[2] = $_POST[$Temp];
+            }
+            else{
+                $Answered[2]="O";
+            }
             $Temp = $quizid . "004";
-            $Answered[3] = $_POST[$Temp];
+            if(isset($_POST[$Temp])){
+                $Answered[3] = $_POST[$Temp];
+            }
+            else{
+                $Answered[3]="O";
+            }
             $Temp = $quizid . "005";
-            $Answered[4] = $_POST[$Temp];
+            if(isset($_POST[$Temp])){
+                $Answered[4] = $_POST[$Temp];
+            }
+            else{
+                $Answered[4]="O";
+            }
             $Temp = $quizid . "006";
-            $Answered[5] = $_POST[$Temp];
+            if(isset($_POST[$Temp])){
+                $Answered[5] = $_POST[$Temp];
+            }
+           else{
+               $Answered[5]="O";
+           }
             $Temp = $quizid . "007";
-            $Answered[6] = $_POST[$Temp];
+            if(isset($_POST[$Temp])){
+                $Answered[6] = $_POST[$Temp];
+            }
+            else{
+                $Answered[6]="O";
+            }
             $Temp = $quizid . "008";
-            $Answered[7] = $_POST[$Temp];
+            if(isset($_POST[$Temp])){
+                $Answered[7] = $_POST[$Temp];
+            }
+            else{
+                $Answered[7]="O";
+            }
             $Temp = $quizid . "009";
-            $Answered[8] = $_POST[$Temp];
+            if(isset($_POST[$Temp])){
+                $Answered[8] = $_POST[$Temp];
+            }
+            else{
+                $Answered[8]="O";
+            }
             $Temp = $quizid . "010";
-            $Answered[9] = $_POST[$Temp];
+            if(isset($_POST[$Temp])){
+                $Answered[9] = $_POST[$Temp];
+            }
+            else{
+                $Answered[9]="O";
+            }
+
             $subid = array("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10");
             unset($Temp);
 
@@ -111,8 +162,13 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
             for ($i = 0; $i < 10; $i++) {
                 $ids[$i] = $quizid . "0" . $subid[$i];
             }
+            $usrID = $_POST["user_id"];
+            $con1 = mysqli_connect('localhost:3306', 'root', '','dbms') or die(mysqli_error(con1));
+            $xyz = mysqli_query($con1,"select EMAIL FROM users where USER_ID LIKE'".$usrID."'") or die(mysqli_error($con1));
+            $abc=mysqli_fetch_assoc($xyz);
+            $UserName = $abc["EMAIL"];
+            echo $UserName;
 
-            $UserName = $_POST["USERNAME"];
 
             $result = mysqli_query($con, "SELECT * FROM answers where Q_ID LIKE '" . $quizid . "%'");
 
@@ -144,52 +200,36 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
                 ?>
             </table>
             <?php
-            echo "<h3 style='float: right'>" . $UserName . "'s TOTAL : " . $sum . " of 10</h3>";
 
 
-            $usrchk = mysqli_query($con, "select * from users where USERNAME ='$UserName'");
 
+            $usrchk = mysqli_query($con, "select * from users where EMAIL ='$UserName'");
+            $qid=mysqli_query($con,"SELECT * FROM QUESTIONS where Q_ID like '$quizid%'");
+            $question_id=array();
+            $qwe=0;
+            while($row=mysqli_fetch_assoc($qid)){
+                $question_id[$qwe]=$row['Q_ID'];
+                $qwe++;
+            }
             if (mysqli_num_rows($usrchk) > 0) {
                 $row = mysqli_fetch_assoc($usrchk);
-                $usrID = $row["USER_ID"];
                 $date = date_create();
                 $timed = date_timestamp_get($date);
-                if (!mysqli_query($con, "insert into answered values('$usrID','$sum','$quizid','$timed')")) {
-                    echo mysqli_error($con);
-                }
-            } else {
-                $usrchk = mysqli_query($con, "select * from users");
-                $i = 0;
-                $usrIDS = array();
-                while ($row = mysqli_fetch_assoc($usrchk)) {
-                    $usrIDS[$i] = $row['USER_ID'];
-                    $i++;
-                }
-
-                $usrID = null;
-
-                $usrID = "QUIZ" . rand(100, 999);
-                for ($j = 0; $i < sizeof($usrIDS); $j++) {
-                    if (strcmp($usrID, $usrIDS[$j]) != 0) {
-                        break;
-                    } elseif ($i == (sizeof($usrIDS) - 1)) {
-                        $usrID = "QUIZ" . rand(100, 999);
+                echo "<h3 style='float: right'>" . $row['USERNAME'] . "'s TOTAL : " . $sum . " of 10</h3>";
+                for($z=0;$z<10;$z++){
+                    if (!mysqli_query($con, "insert into answered_pre_question values('$usrID','$quizid','$question_id[$z]','$timed','$Answered[$z]','sure')")) {
+                        echo mysqli_error($con);
                     }
                 }
 
-                mysqli_query($con, "insert into users values('$usrID','$UserName','$UserName')");
-
-                $usrchk = mysqli_query($con, "select * from users where USERNAME ='$UserName'");
-                $row = mysqli_fetch_assoc($usrchk);
-                $usrID = $row["USER_ID"];
-                $date = date_create();
-                $timed = date_timestamp_get($date);
-                if (!mysqli_query($con, "insert into answered values('$usrID','$sum','$quizid','$timed')")) {
+                if (!mysqli_query($con, "insert into answered values('$usrID','$sum','$quizid','$timed',null)")) {
                     echo mysqli_error($con);
                 }
-
+            } else {
+                echo "<h3 style='float: right'>Unknown's TOTAL : " . $sum . " of 10</h3>";
+                echo "<script> alert('Not Logged IN your result isn\'t saved') </script>";
             }
-
+            mysqli_close($con);
             ?>
         </h4>
     </div>

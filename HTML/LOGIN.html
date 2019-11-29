@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Quiz</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/uikit/css/uikit.min.css"/>
+    <script src="../js/uikit/uikit.min.js"></script>
+    <script src="../js/uikit/uikit-icons.min.js"></script>
+    <style>
+        .insideup a {
+            padding: 30px 10px 30px 10px;
+            margin-left: 50%;
+        }
+
+        .insideup p {
+            margin-left: 50.4%;
+            margin-top: -1.5%;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+<nav class="uk-navbar-container uk-dark uk-background-secondary uk-position-top uk-text-center uk-margin uk-navbar">
+    <div class="uk-navbar-center">
+        <a class="uk-navbar-item uk-logo" href="../HTML/StartingPage.html">
+            <h3 class="uk-text-muted">Online<br>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;Quiz</h3>
+        </a>
+    </div>
+
+</nav>
+
+<div class="uk-card uk-card-secondary uk-card-body uk-align-center uk-text-center uk-position-center uk-margin-remove-top">
+    <form action="../php/registration_result.php" method="post" class="uk-form-width-large uk-align-center">
+        <label>
+            <input type="email" placeholder="EMAIL" class="uk-input" name="email" required>
+        </label>
+
+        <br><br>
+        <label>
+            <input type="date" placeholder="DATE" class="uk-input" name="date" required>
+        </label>
+
+        <br><br>
+        <label>
+            <input type="password" name="password" id="1" required="required" class="uk-input"
+                   placeholder="PASSWORD" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                   title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/>
+        </label>
+        <br>
+        <label>
+            <input class="uk-checkbox" type="checkbox" onclick="myFunction()"/>
+            Show Password
+        </label>
+
+        <label>
+            <input type="hidden" value="signup" name="type">
+        </label>
+
+        <br>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("1");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
+        </script>
+
+        <br><br>
+        <button class="uk-button-large" type="submit"
+                style="color: black;border-radius: 15px;background-color: #0f6ecd;width: 150px">
+            SIGN IN
+        </button>
+
+
+            <button class="uk-button-large" type="reset"
+                    style="color: black;border-radius: 15px;background-color: #0e6dcd;width: 150px">
+                RESET
+            </button>
+
+
+    </form>
+</div>
+
+
+
+</body>
+</html>

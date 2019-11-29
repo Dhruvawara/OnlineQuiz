@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="661a56bc-b7d0-4534-bb88-34b00003f0b7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/HTML/LOGIN.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/SIGNUP.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/registration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/TEST.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/USER_CHECK.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/VALIDATION.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/registration_result.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/dhruv.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/dhruv.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/LandingPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/LandingPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/StartingPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/StartingPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/QUIZ_TEMPLATE.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/QUIZ_TEMPLATE.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/check.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/check.php" afterDir="false" />
     </list>
@@ -33,6 +45,17 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="dbms@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="dbms@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="dbms@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="dbms: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
     </expand>
     <select />
   </component>
@@ -44,6 +67,13 @@
   <component name="ExportToHTMLSettings">
     <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../OnlineQuiz\exportToHTML" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -54,23 +84,31 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3" />
   <component name="ProjectId" id="1Rp05lGRVfVOGKRqLvzYmIlzOLs" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/HTMl" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/css" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\OnlineQuiz\css" />
+      <recent name="C:\xampp\htdocs\OnlineQuiz\img" />
+      <recent name="C:\xampp\htdocs\OnlineQuiz\js" />
       <recent name="C:\xampp\htdocs\OnlineQuiz\HTMl" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\OnlineQuiz\HTMl" />
+      <recent name="C:\xampp\htdocs\OnlineQuiz\HTML" />
       <recent name="C:\xampp\htdocs\OnlineQuiz\php" />
+      <recent name="C:\xampp\htdocs\OnlineQuiz\HTMl" />
       <recent name="C:\xampp\htdocs\OnlineQuiz" />
     </key>
   </component>
@@ -91,18 +129,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.QUIZ_TEMPLATE.php">
-    <configuration name="LandingPage.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/OnlineQuiz/HTMl/LandingPage.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript Debug.LOGIN.html">
+    <configuration name="LOGIN.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/OnlineQuiz/HTML/LOGIN.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="StartingPage.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/OnlineQuiz/HTMl/StartingPage.html" useBuiltInWebServerPort="true">
+    <configuration name="LandingPage.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/OnlineQuiz/HTMl/LandingPage.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="OnlineQuiz" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner directory="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="DataBaseConnector.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/php/DataBaseConnector.php">
       <method v="2" />
     </configuration>
     <configuration name="QUIZ_TEMPLATE.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/php/QUIZ_TEMPLATE.php">
@@ -111,21 +146,24 @@
     <configuration name="check.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/php/check.php">
       <method v="2" />
     </configuration>
+    <configuration name="registration_result.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/php/registration_result.php">
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="JavaScript Debug.LandingPage.html" />
-      <item itemvalue="JavaScript Debug.StartingPage.html" />
-      <item itemvalue="PHP Script.DataBaseConnector.php" />
+      <item itemvalue="JavaScript Debug.LOGIN.html" />
       <item itemvalue="PHP Script.QUIZ_TEMPLATE.php" />
       <item itemvalue="PHP Script.check.php" />
+      <item itemvalue="PHP Script.registration_result.php" />
       <item itemvalue="PHPUnit.OnlineQuiz" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.LOGIN.html" />
+        <item itemvalue="PHP Script.registration_result.php" />
         <item itemvalue="PHP Script.QUIZ_TEMPLATE.php" />
         <item itemvalue="PHP Script.check.php" />
         <item itemvalue="JavaScript Debug.LandingPage.html" />
-        <item itemvalue="PHP Script.DataBaseConnector.php" />
-        <item itemvalue="JavaScript Debug.StartingPage.html" />
       </list>
     </recent_temporary>
   </component>
@@ -133,17 +171,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c6ba58f6" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c6ba58f6" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@302a04b6" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -176,6 +204,15 @@
       <workItem from="1573986773444" duration="5191000" />
       <workItem from="1574070145116" duration="1440000" />
       <workItem from="1574072820783" duration="1577000" />
+      <workItem from="1574132261202" duration="207000" />
+      <workItem from="1574143410320" duration="6149000" />
+      <workItem from="1574166297922" duration="1802000" />
+      <workItem from="1574919912713" duration="9689000" />
+      <workItem from="1574953867113" duration="105000" />
+      <workItem from="1574954137297" duration="6739000" />
+      <workItem from="1574961599110" duration="21452000" />
+      <workItem from="1575008044421" duration="6742000" />
+      <workItem from="1575031661919" duration="596000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1570883719202</created>
@@ -226,7 +263,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573992671741</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="ass">
+      <created>1574132285037</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1574132285037</updated>
+    </task>
+    <task id="LOCAL-00009" summary="ass">
+      <created>1574132382693</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1574132382693</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +297,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Test" />
     <MESSAGE value="aas" />
     <MESSAGE value="ass" />

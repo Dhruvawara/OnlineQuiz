@@ -107,9 +107,9 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo substr($row['Q_ID'], -2) . ". " . $row['QUESTION'];
                         echo "<fieldset name='" . substr($row['Q_ID'], -4) . "'>";
-                        echo "<input type=\"radio\" value=\"A\"  name='" . substr($row['Q_ID'], -4) . "' checked>" . $row['optionA'];
-                        echo "<input type=\"radio\" value=\"B\" name='" . substr($row['Q_ID'], -4) . "'>" . $row['optionB'];
-                        echo "<input type=\"radio\" value=\"C\" name='" . substr($row['Q_ID'], -4) . "'>" . $row['optionC'] . "</fieldset><br><br>";
+                        echo "<input type=\"radio\" value=\"A\"  name='" . substr($row['Q_ID'], -4) . "' >" . $row['optionA'];
+                        echo "<br><input type=\"radio\" value=\"B\" name='" . substr($row['Q_ID'], -4) . "'>" . $row['optionB'];
+                        echo "<br><input type=\"radio\" value=\"C\" name='" . substr($row['Q_ID'], -4) . "'>" . $row['optionC'] . "</fieldset><br><br>";
                         $i++;
                     }
                     ?>
@@ -118,14 +118,15 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
 
                 <br><br>
                 <?php
+                $user_id= $_POST['user_id'];
                 echo " <input value=\"$quizid\" id=\"type\" type=\"hidden\" name='type'>";
-
+                echo " <input value=\"$user_id\" id=\"user_id\" type=\"hidden\" name='user_id'>";
+                mysqli_close($con);
                 ?>
 
 
-                <label for="username" style="width: 25%;height: 25px">USER NAME:</label>
-                <input style="height: 25px;border-radius: 5px;color: #080808;width: 75%" type="text" id="username"
-                       name="USERNAME" value="Unknown">
+
+
 
             </div>
 

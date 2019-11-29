@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <link href="//fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/uikit/css/uikit.min.css"/>
+    <script src="../js/uikit/uikit.min.js"></script>
+    <script src="../js/uikit/uikit-icons.min.js"></script>
+    <style>
+        .insideup a {
+            padding: 30px 10px 30px 10px;
+            margin-left: 50%;
+        }
+
+        /* The message box is shown when the user clicks on the password field */
+        #message {
+            display: none;
+            background: #f1f1f1;
+            color: #000;
+            position: relative;
+            padding: 20px;
+            margin-top: 10px;
+        }
+
+        #message p {
+            padding: 10px 35px;
+            font-size: 18px;
+        }
+
+        /* Add a green text color and a checkmark when the requirements are right */
+        .valid {
+            color: green;
+        }
+
+        .valid:before {
+            position: relative;
+            left: -35px;
+            content: "✔";
+        }
+
+        /* Add a red text color and an "x" when the requirements are wrong */
+        .invalid {
+            color: red;
+        }
+
+        .invalid:before {
+            position: relative;
+            left: -35px;
+            content: "✖";
+        }
+
+    </style>
+</head>
+<body>
+<nav class="uk-navbar-container uk-dark uk-background-secondary uk-position-top uk-text-center uk-margin uk-navbar">
+    <div class="uk-navbar-center">
+        <a class="uk-navbar-item uk-logo" href="StartingPage.html">
+            <h3 class="uk-text-muted">Online<br>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;Quiz</h3>
+        </a>
+
+    </div>
+</nav>
+
+
+<div class="uk-card uk-card-secondary uk-card-body uk-align-center uk-text-center uk-position-center uk-margin-remove-top">
+
+    <form action="../php/VALIDATION.php" method="post" class="uk-form-width-large uk-align-center">
+        <label>
+            <input type="text" name="username" id="1" required="required" class="uk-input" placeholder="EMAIL"/>
+        </label>
+        <br>
+        <br>
+        <label>
+            <input type="password" name="password" id="2" required="required" class="uk-input"
+                   placeholder="PASSWORD" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                   title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/>
+        </label>
+        <br>
+        <label>
+            <input class="uk-checkbox" type="checkbox" onclick="myFunction()" />
+            Show Password
+        </label>
+
+        <br>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("2");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
+        </script>
+        <br>
+        <label>
+            <input type="hidden" value="registration" name="type">
+        </label>
+        <button class="uk-button" type="submit"
+                style="color: black;border-radius: 15px;background-color: #0f6ecd;width: 150px">
+            SIGN IN
+        </button>
+
+        <button class="uk-button" type="reset"
+                style="color: black;border-radius: 15px;background-color: #0e6dcd;width: 150px">
+            RESET
+        </button>
+    </form>
+    <a href="SIGNUP.html" >
+        <button class="uk-button" type="submit"
+                style="color: black;border-radius: 15px;background-color: #0e6dcd;width: 150px">
+            SIGN UP
+        </button>
+    </a>
+
+
+</div>
+</body>
+</html>
