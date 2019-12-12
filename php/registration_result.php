@@ -104,8 +104,8 @@ $con2 = mysqli_connect('localhost:3306', 'root', '', 'dbms');
 $gettime = mysqli_query($con2, "select * from time_given where USER_ID = '" . $user_id . "'") or die(mysqli_error($con2));
 $row = mysqli_fetch_assoc($gettime);
 $z = (int)$row['time_given'];
-echo ($timed . $z);
-if ($z<$timed  ) {
+echo($timed . $z);
+if ($z < $timed) {
     header("Location: http://localhost/OnlineQuiz/HTML/LOGIN.html");
 } else {
     ?>

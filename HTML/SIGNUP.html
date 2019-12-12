@@ -3,8 +3,8 @@
 <head>
     <title>Online Quiz</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/uikit/css/uikit.min.css"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="../css/uikit/css/uikit.min.css" rel="stylesheet"/>
     <script src="../js/uikit/uikit.min.js"></script>
     <script src="../js/uikit/uikit-icons.min.js"></script>
     <style>
@@ -16,76 +16,94 @@
     </style>
 </head>
 <body>
-<nav class="uk-navbar-container uk-dark uk-background-secondary uk-position-top uk-text-center uk-margin uk-navbar">
-    <div class="uk-navbar-center">
-        <a class="uk-navbar-item uk-logo" href="StartingPage.html">
-            <h3 class="uk-text-muted">Online<br>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;Quiz</h3>
-        </a>
+
+
+<div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding"
+     data-src="../img/signup2.jpg" uk-height-viewport uk-img>
+
+
+    <div class="uk-card uk-card-secondary uk-card-body uk-align-center uk-text-center uk-position-center-left uk-position-large uk-flex uk-flex-middle uk-margin-xlarge-left"
+         style=" border-radius: 16px;">
+        <form action="http://127.0.0.1/OnlineQuiz/php/USER_CHECK.php" class="uk-form-width-large uk-align-center"
+              method="post">
+            <label>
+                <input class="uk-input" name="email" placeholder="EMAIL" required
+                       style="border-radius: 16px; opacity: 0.9;"
+                       type="email">
+            </label>
+
+            <br><br>
+            <label>
+                <input class="uk-input" name="username" placeholder="USERNAME" required
+                       style="border-radius: 16px; opacity: 0.9;"
+                       type="text">
+            </label>
+
+            <br><br>
+            <label>
+                <input class="uk-input" name="date" placeholder="DATE" required
+                       style="border-radius: 16px; opacity: 0.9;"
+                       type="date">
+            </label>
+
+            <br><br>
+            <label>
+                <input class="uk-input" id="1" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                       placeholder="PASSWORD"
+                       required="required"
+                       title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                       type="password"/
+                style="border-radius: 16px; opacity: 0.9;">
+            </label>
+            <br> <br> <br>
+            <label>
+                <input class="uk-checkbox" onclick="myFunction()" type="checkbox"/ style="border-radius: 16px;""> &nbsp;
+                Show Password
+            </label>
+
+            <label>
+                <input name="type" type="hidden" value="signup">
+            </label>
+
+            <br>
+            <script>
+                function myFunction() {
+                    const x = document.getElementById("1");
+                    if (x.type === "password") {
+                        x.type = "text";
+                    } else {
+                        x.type = "password";
+                    }
+                }
+            </script>
+
+            <br><br>
+            <button class="uk-button-large"
+                    style="color: black;border-radius: 15px;background-color: #ffffff;width: 150px"
+                    type="submit">
+                SIGN UP
+            </button>
+            &nbsp; &nbsp; &nbsp;
+            <a href="registration.html">
+                <button class="uk-button-large"
+                        style="color: black;border-radius: 15px;background-color: #ffffff;width: 150px"
+                        type="reset">
+                    RESET
+                </button>
+            </a>
+
+            <br>
+            <hr class="uk-divider-icon uk-text-secondary">
+            <a class="uk-test-secondary " href="StartingPage.html"><p
+                    class="uk-test-secondary uk-text-primary uk-text center">Click Here For Starting Page</p></a>
+
+
+        </form>
     </div>
 
-</nav>
-
-<div class="uk-card uk-card-secondary uk-card-body uk-align-center uk-text-center uk-position-center uk-margin-remove-top">
-    <form action="../php/USER_CHECK.php" method="post" class="uk-form-width-large uk-align-center">
-        <label>
-            <input type="email" placeholder="EMAIL" class="uk-input" name="email" required>
-        </label>
-
-        <br><br>
-        <label>
-            <input type="text" placeholder="USERNAME" class="uk-input" name="username" required>
-        </label>
-
-        <br><br>
-        <label>
-            <input type="date" placeholder="DATE" class="uk-input" name="date" required>
-        </label>
-
-        <br><br>
-        <label>
-            <input type="password" name="password" id="1" required="required" class="uk-input"
-                   placeholder="PASSWORD" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                   title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/>
-        </label>
-        <br>
-        <label>
-            <input class="uk-checkbox" type="checkbox" onclick="myFunction()"/>
-            Show Password
-        </label>
-
-        <label>
-            <input type="hidden" value="signup" name="type">
-        </label>
-
-        <br>
-        <script>
-            function myFunction() {
-                const x = document.getElementById("1");
-                if (x.type === "password") {
-                    x.type = "text";
-                } else {
-                    x.type = "password";
-                }
-            }
-        </script>
-
-        <br><br>
-        <button class="uk-button-large" type="submit"
-                style="color: black;border-radius: 15px;background-color: #42dee1;width: 150px">
-            SIGN UP
-        </button>
-
-        <a href="registration.html" >
-            <button class="uk-button-large" type="reset"
-                    style="color: black;border-radius: 15px;background-color: #da2d2d;width: 150px">
-                RESET
-            </button>
-        </a>
-
-    </form>
 </div>
-
-
 
 </body>
 </html>
+
+

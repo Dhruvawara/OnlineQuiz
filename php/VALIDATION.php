@@ -72,13 +72,13 @@ if (strcmp($toGo, "registration") == 0) {
         $passwords[$i] = trim($row['PASSWORD']);
         $i++;
     }
-    $user_id="";
+    $user_id = "";
     for ($i = 0; $i < sizeof($usernames); $i++) {
         if (strcmp($usernames[$i], $username) == 0) {
-            $con1 = mysqli_connect('localhost:3306', 'root', '','dbms');
-            $getID=mysqli_query($con1,"select user_id from users where EMAIL = '$usernames[$i]'") or die(mysqli_error($con1));
-            $row=mysqli_fetch_assoc($getID);
-            $user_id=$row['user_id'];
+            $con1 = mysqli_connect('localhost:3306', 'root', '', 'dbms');
+            $getID = mysqli_query($con1, "select user_id from users where EMAIL = '$usernames[$i]'") or die(mysqli_error($con1));
+            $row = mysqli_fetch_assoc($getID);
+            $user_id = $row['user_id'];
             echo "<hr>";
             break;
         } elseif ($i == (sizeof($usernames) - 1)) {
@@ -100,26 +100,26 @@ if (strcmp($toGo, "registration") == 0) {
 
     date_default_timezone_set('Asia/Calcutta');
     $date = date_create();
-    $timed =date_timestamp_get($date);
-    echo "<br><br><br><br>".date('Y-m-d H:i:s',$timed)."\t".date('Y-m-d H:i:s',($timed+120))."<br>";
-    $x="";
-    $x=$timed+120;
-    $con2 = mysqli_connect('localhost:3306', 'root', '','dbms');
-    $gettime=mysqli_query($con2,"select * from time_given where USER_ID = '".$user_id."'") or die(mysqli_error($con2));
-    $row=mysqli_fetch_assoc($gettime);
-    $z=(int)$row['time_given'];
-    echo strcmp(trim($timed),trim($z));
-    if($timed<$z){
-        echo "<script> alert('already entered for time : ".date('Y-m-d H:i:s',$z)."') </script>";
-    }else{
-        $setTime=mysqli_query($con2,"update time_given set time_given = '$x' where (USER_ID = '".$user_id."')") or die(mysqli_error($con2));
-        echo "\t".date('Y-m-d H:i:s',($timed+120))."\t".$user_id;
+    $timed = date_timestamp_get($date);
+    echo "<br><br><br><br>" . date('Y-m-d H:i:s', $timed) . "\t" . date('Y-m-d H:i:s', ($timed + 120)) . "<br>";
+    $x = "";
+    $x = $timed + 120;
+    $con2 = mysqli_connect('localhost:3306', 'root', '', 'dbms');
+    $gettime = mysqli_query($con2, "select * from time_given where USER_ID = '" . $user_id . "'") or die(mysqli_error($con2));
+    $row = mysqli_fetch_assoc($gettime);
+    $z = (int)$row['time_given'];
+    echo strcmp(trim($timed), trim($z));
+    if ($timed < $z) {
+        echo "<script> alert('already entered for time : " . date('Y-m-d H:i:s', $z) . "') </script>";
+    } else {
+        $setTime = mysqli_query($con2, "update time_given set time_given = '$x' where (USER_ID = '" . $user_id . "')") or die(mysqli_error($con2));
+        echo "\t" . date('Y-m-d H:i:s', ($timed + 120)) . "\t" . $user_id;
     }
 
 }
-    mysqli_close($con);
-    mysqli_close($con1);
-    mysqli_close($con2);
+mysqli_close($con);
+mysqli_close($con1);
+mysqli_close($con2);
 ?>
 
 

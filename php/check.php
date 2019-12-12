@@ -50,27 +50,9 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
             margin-top: -1.5%;
         }
 
-        input[type=submit] {
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            float: right;
-        }
-
     </style>
 </head>
 <body>
-<nav class="uk-navbar-container uk-dark uk-background-secondary uk-position-top uk-text-center uk-margin uk-navbar">
-    <div class="uk-navbar-center">
-        <a class="uk-navbar-item uk-logo" href="../HTML/StartingPage.html">
-            <h3 class="uk-text-muted">Online<br>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;Quiz</h3>
-        </a>
-    </div>
-
-</nav>
 
 <div class="uk-section uk-background-secondary uk-light">
     <div class="uk-container uk-container-expand uk-text-center " style=" padding: 0; border: red;">
@@ -85,74 +67,64 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
 
             $quizid = $_POST["type"];
             $Temp = $quizid . "001";
-            if(isset($_POST[$Temp])){
+            if (isset($_POST[$Temp])) {
                 $Answered[0] = $_POST[$Temp];
-            }
-            else{
-                $Answered[0]="O";
+            } else {
+                $Answered[0] = "O";
             }
             $Temp = $quizid . "002";
-            if(isset($_POST[$Temp])){
+            if (isset($_POST[$Temp])) {
                 $Answered[1] = $_POST[$Temp];
-            }
-            else{
-                $Answered[1]="O";
+            } else {
+                $Answered[1] = "O";
             }
             $Temp = $quizid . "003";
-            if(isset($_POST[$Temp])){
+            if (isset($_POST[$Temp])) {
                 $Answered[2] = $_POST[$Temp];
-            }
-            else{
-                $Answered[2]="O";
+            } else {
+                $Answered[2] = "O";
             }
             $Temp = $quizid . "004";
-            if(isset($_POST[$Temp])){
+            if (isset($_POST[$Temp])) {
                 $Answered[3] = $_POST[$Temp];
-            }
-            else{
-                $Answered[3]="O";
+            } else {
+                $Answered[3] = "O";
             }
             $Temp = $quizid . "005";
-            if(isset($_POST[$Temp])){
+            if (isset($_POST[$Temp])) {
                 $Answered[4] = $_POST[$Temp];
-            }
-            else{
-                $Answered[4]="O";
+            } else {
+                $Answered[4] = "O";
             }
             $Temp = $quizid . "006";
-            if(isset($_POST[$Temp])){
+            if (isset($_POST[$Temp])) {
                 $Answered[5] = $_POST[$Temp];
+            } else {
+                $Answered[5] = "O";
             }
-           else{
-               $Answered[5]="O";
-           }
             $Temp = $quizid . "007";
-            if(isset($_POST[$Temp])){
+            if (isset($_POST[$Temp])) {
                 $Answered[6] = $_POST[$Temp];
-            }
-            else{
-                $Answered[6]="O";
+            } else {
+                $Answered[6] = "O";
             }
             $Temp = $quizid . "008";
-            if(isset($_POST[$Temp])){
+            if (isset($_POST[$Temp])) {
                 $Answered[7] = $_POST[$Temp];
-            }
-            else{
-                $Answered[7]="O";
+            } else {
+                $Answered[7] = "O";
             }
             $Temp = $quizid . "009";
-            if(isset($_POST[$Temp])){
+            if (isset($_POST[$Temp])) {
                 $Answered[8] = $_POST[$Temp];
-            }
-            else{
-                $Answered[8]="O";
+            } else {
+                $Answered[8] = "O";
             }
             $Temp = $quizid . "010";
-            if(isset($_POST[$Temp])){
+            if (isset($_POST[$Temp])) {
                 $Answered[9] = $_POST[$Temp];
-            }
-            else{
-                $Answered[9]="O";
+            } else {
+                $Answered[9] = "O";
             }
 
             $subid = array("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10");
@@ -163,12 +135,10 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
                 $ids[$i] = $quizid . "0" . $subid[$i];
             }
             $usrID = $_POST["user_id"];
-            $con1 = mysqli_connect('localhost:3306', 'root', '','dbms') or die(mysqli_error(con1));
-            $xyz = mysqli_query($con1,"select EMAIL FROM users where USER_ID LIKE'".$usrID."'") or die(mysqli_error($con1));
-            $abc=mysqli_fetch_assoc($xyz);
+            $con1 = mysqli_connect('localhost:3306', 'root', '', 'dbms') or die(mysqli_error(con1));
+            $xyz = mysqli_query($con1, "select EMAIL FROM users where USER_ID LIKE'" . $usrID . "'") or die(mysqli_error($con1));
+            $abc = mysqli_fetch_assoc($xyz);
             $UserName = $abc["EMAIL"];
-            echo $UserName;
-
 
             $result = mysqli_query($con, "SELECT * FROM answers where Q_ID LIKE '" . $quizid . "%'");
 
@@ -202,13 +172,12 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
             <?php
 
 
-
             $usrchk = mysqli_query($con, "select * from users where EMAIL ='$UserName'");
-            $qid=mysqli_query($con,"SELECT * FROM QUESTIONS where Q_ID like '$quizid%'");
-            $question_id=array();
-            $qwe=0;
-            while($row=mysqli_fetch_assoc($qid)){
-                $question_id[$qwe]=$row['Q_ID'];
+            $qid = mysqli_query($con, "SELECT * FROM QUESTIONS where Q_ID like '$quizid%'");
+            $question_id = array();
+            $qwe = 0;
+            while ($row = mysqli_fetch_assoc($qid)) {
+                $question_id[$qwe] = $row['Q_ID'];
                 $qwe++;
             }
             if (mysqli_num_rows($usrchk) > 0) {
@@ -216,7 +185,7 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
                 $date = date_create();
                 $timed = date_timestamp_get($date);
                 echo "<h3 style='float: right'>" . $row['USERNAME'] . "'s TOTAL : " . $sum . " of 10</h3>";
-                for($z=0;$z<10;$z++){
+                for ($z = 0; $z < 10; $z++) {
                     if (!mysqli_query($con, "insert into answered_pre_question values('$usrID','$quizid','$question_id[$z]','$timed','$Answered[$z]','sure')")) {
                         echo mysqli_error($con);
                     }

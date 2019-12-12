@@ -56,50 +56,49 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
 
 </nav>
 <?php
-    $toGo = $_POST["type"];
-    $toGo = trim($toGo);
-    if (strcmp($toGo,"SIGNUP")){
-            $email=strtolower($_POST['email']);
-            $username=$_POST["username"];
-            $dob=date('Y-m-d', strtotime($_POST['date']));
-            $pass=$_POST["password"];
-            $usrchk = mysqli_query($con, "select * from users") or die(mysqli_error($con));
-            $i = 0;
-            $usrIDS = array();
-            $emails=array();
-            while ($row = mysqli_fetch_assoc($usrchk)) {
-                $usrIDS[$i] = $row['USER_ID'];
-                $emails[$i]=$row['EMAIL'];
-                $i++;
-            }
+$toGo = $_POST["type"];
+$toGo = trim($toGo);
+if (strcmp($toGo, "SIGNUP")) {
+    $email = strtolower($_POST['email']);
+    $username = $_POST["username"];
+    $dob = date('Y-m-d', strtotime($_POST['date']));
+    $pass = $_POST["password"];
+    $usrchk = mysqli_query($con, "select * from users") or die(mysqli_error($con));
+    $i = 0;
+    $usrIDS = array();
+    $emails = array();
+    while ($row = mysqli_fetch_assoc($usrchk)) {
+        $usrIDS[$i] = $row['USER_ID'];
+        $emails[$i] = $row['EMAIL'];
+        $i++;
+    }
 
-            for($i=0;$i<sizeof($emails);$i++){
-                if (strcmp($emails[$i],$email) == 0){
-                    echo "<script> alert('Email already used enter new email go back') </script><br><br><br><br>
+    for ($i = 0; $i < sizeof($emails); $i++) {
+        if (strcmp($emails[$i], $email) == 0) {
+            echo "<script> alert('Email already used enter new email go back') </script><br><br><br><br>
                             <a href='../HTML/SIGNUP.html' >Go Back</a>";
-                  //  header('Location: ' . $_SERVER['HTTP_REFERER']);
-                    die();
-                }
-            }
+            //  header('Location: ' . $_SERVER['HTTP_REFERER']);
+            die();
+        }
+    }
 
+    $usrID = "QUIZ" . rand(100, 999);
+    for ($j = 0; $i < sizeof($usrIDS); $j++) {
+        if (strcmp($usrID, $usrIDS[$j]) != 0) {
+            break;
+        } elseif ($i == (sizeof($usrIDS) - 1)) {
             $usrID = "QUIZ" . rand(100, 999);
-            for ($j = 0; $i < sizeof($usrIDS); $j++) {
-                if (strcmp($usrID, $usrIDS[$j]) != 0) {
-                    break;
-                } elseif ($i == (sizeof($usrIDS) - 1)) {
-                    $usrID = "QUIZ" . rand(100, 999);
-                }
-            }
-            mysqli_query($con, "insert into users values('$usrID','$email','$username','$pass','$dob')");
-        echo "<script> alert('successful!!!') </script>";
-        sleep(1);
-        header("Location: http://localhost/OnlineQuiz/HTML/SIGNUP.html");
-        die();
+        }
     }
-    else{
-        echo "<script> alert('XD') </script>";
-    }
-    mysqli_close($con);
+    mysqli_query($con, "insert into users values('$usrID','$email','$username','$pass','$dob')");
+    echo "<script> alert('successful!!!') </script>";
+    sleep(1);
+    header("Location: http://localhost/OnlineQuiz/HTML/SIGNUP.html");
+    die();
+} else {
+    echo "<script> alert('XD') </script>";
+}
+mysqli_close($con);
 ?>
 
 

@@ -3,8 +3,8 @@
 <head>
     <title>Online Quiz</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/uikit/css/uikit.min.css"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="../css/uikit/css/uikit.min.css" rel="stylesheet"/>
     <script src="../js/uikit/uikit.min.js"></script>
     <script src="../js/uikit/uikit-icons.min.js"></script>
 
@@ -16,12 +16,12 @@
             <h3 class="uk-text-muted">Online<br>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;Quiz</h3>
         </a>
     </div>
-    <div class="uk-navbar-right">
+    <div class="uk-navbar-right uk-margin-small-right">
 
-                <a href="../HTML/LOGIN.html" uk-scroll>
-                    <<span class="uk-icon uk-margin-small-right" uk-icon="icon: user"></span>>
-                    About Online Quiz
-                </a>
+        <a href="#bodyid" uk-scroll>
+            <span class="uk-icon uk-margin-small-right" uk-icon="icon: user"></span>
+            About Online Quiz
+        </a>
 
     </div>
 
@@ -30,23 +30,20 @@
 
 
 <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding"
-     data-src="../img/lback.jpg" uk-img uk-height-viewport>
+     data-src="../img/lback.jpg" uk-height-viewport uk-img>
     <br>
     <br>
-    <h1 class="uk-margin-large-left uk-margin-large-right uk-text-center">Anything Realted to Quiz Type Here AND Most
-        Importantly "Don't Forget Type Here"
-        <br><br><a href="../HTML/LOGIN.html" >
-            <button class="uk-button uk-button-large uk-align-center"
-                    style="color: white;border-radius: 15px;background-color: #222831;width: 350px">
-                Click Here To Start The Quiz
-            </button>
-        </a>
+    <h1 class="uk-margin-large-left uk-margin-large-right uk-text-center">Click Below to start
+        <br><br>
+        <button class="uk-button uk-button-default uk-button-large uk-align-center"
+                onclick="location.href='../HTML/LOGIN.html'">Click Here
+        </button>
 
     </h1>
 </div>
 
 
-<div class="uk-section uk-margin-remove-top" id="aboutonlinequiz" style="background-color: black;">
+<div class="uk-section uk-margin-remove-top" id="aboutOnlineQuiz" style="background-color: black;">
     <div class="uk-container uk-align-center" id="bodyid">
         <div class="uk-child-width-1-3@m" uk-grid
              uk-scrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 300; repeat: true">
@@ -60,8 +57,8 @@
                 </div>
             </div>
             <div>
-                <div class="uk-card uk-card-default uk-card-body" uk-scrollspy-class="uk-animation-slide-top"
-                     style="border-radius:50px;">
+                <div class="uk-card uk-card-default uk-card-body" style="border-radius:50px;"
+                     uk-scrollspy-class="uk-animation-slide-top">
                     <h3 class="uk-card-title"><u><b>Online</b></u> <u><b> Quiz</b></u></h3>
                     <p>Online quizzes are a popular form of entertainment for web surfers. Online quizzes
                         are generally free to play and for entertainment purposes only though some online quiz
@@ -84,7 +81,7 @@
 </div>
 
 <div class="uk-section uk-text-center" style="background-color: #1E87F0">
-    <a href="#" uk-totop uk-scroll style="color: hsl(0, 0%, 0%);">
+    <a href="#" style="color: hsl(0, 0%, 0%);" uk-scroll uk-totop>
         <p style="color: hsl(0, 0%, 0%);">Top</p></a>
 </div>
 
