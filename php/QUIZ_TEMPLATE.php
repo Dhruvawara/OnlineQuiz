@@ -29,7 +29,6 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
     <?php
 }
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,15 +62,6 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
     </style>
 </head>
 <body>
-<nav class="uk-navbar-container uk-dark uk-background-secondary uk-position-top uk-text-center uk-margin uk-navbar">
-    <div class="uk-navbar-center">
-        <a class="uk-navbar-item uk-logo" href="../HTML/StartingPage.html">
-            <h3 class="uk-text-muted">Online<br>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;Quiz</h3>
-        </a>
-    </div>
-
-</nav>
-
 <div class="uk-section uk-background-secondary uk-light">
     <div class="uk-container uk-container-expand uk-text-center " style=" padding: 0; border: red;">
         <br>
@@ -91,11 +81,9 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
                 $idquizs[$i] = $row['idQUIZ'];
                 $i++;
             }
-
             $quizi = array_rand($idquizs, 1);
             $quizid = trim((string)$idquizs[$quizi]);
-
-            $con = mysqli_connect('localhost:3306', 'root', '','dbms');
+            $con = mysqli_connect('localhost:3306', 'root', '', 'dbms');
             $result = mysqli_query($con, "SELECT * FROM QUESTIONS where Q_ID like '$quizid%'") or die("ZZZZ");
             ?>
             <br>
@@ -118,19 +106,15 @@ if ($con = mysqli_connect('localhost:3306', 'root', '')) {
 
                 <br><br>
                 <?php
-                $user_id= $_POST['user_id'];
+                $user_id = $_POST['user_id'];
                 echo " <input value=\"$quizid\" id=\"type\" type=\"hidden\" name='type'>";
                 echo " <input value=\"$user_id\" id=\"user_id\" type=\"hidden\" name='user_id'>";
                 mysqli_close($con);
                 ?>
 
 
-
-
-
             </div>
-
-            <input type="SUBMIT" class="uk-button uk-button-primary uk-button-large uk-align-center" value="SUBMIT">
+            <input type="SUBMIT" class="uk-button uk-button-primary uk-button-medium uk-text-center">
         </form>
     </div>
 </div>
