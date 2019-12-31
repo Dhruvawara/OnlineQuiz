@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6465dfec-d47b-4513-acf2-54d20dbf493e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/dhruv.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dump20191129.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Dump20191129.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/LOGIN.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/LOGIN.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/LandingPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/LandingPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/SIGNUP.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/SIGNUP.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/StartingPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/StartingPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/uikit/css/uikit-rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/uikit/css/uikit-rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/uikit/css/uikit.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/uikit/css/uikit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/uikit/uikit-icons.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/uikit/uikit-icons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/uikit/uikit-icons.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/uikit/uikit-icons.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/uikit/uikit.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/uikit/uikit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/uikit/uikit.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/uikit/uikit.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/TEST.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/TEST.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/USER_CHECK.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/USER_CHECK.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/VALIDATION.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/VALIDATION.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/check.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/check.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/registration_result.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/registration_result.php" afterDir="false" />
-    </list>
+    <list default="true" id="6465dfec-d47b-4513-acf2-54d20dbf493e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +44,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576131998805</updated>
-      <workItem from="1576132000086" duration="1194000" />
+      <workItem from="1576132000086" duration="1273000" />
     </task>
     <task id="LOCAL-00001" summary="gg">
       <created>1576132645178</created>
